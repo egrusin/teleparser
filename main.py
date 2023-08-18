@@ -9,11 +9,10 @@ class Teleparser:
         1. Главное окно с поддержкой сценариев.
         2. Ядро telegram-сессии"""
 
-    def __init__(self, win_name: str='teleparser',
-                       win_icon: str='teleparser',
-                       win_size: str='teleparser') -> None:
+    def __init__(self) -> None:
         """Создает главное окно, задает ему параметры и подвязывает к telegram сессии"""
-        pass
+        self.app = tgses.GUIClient(api_hash=api_hash, api_id=api_id)
+        self.gui = win.MainInterface()
 
 
-tgses.check(api_id, api_hash)
+
